@@ -134,6 +134,81 @@ body {
     margin: 0;
 }
 
+.projects {
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 95.44%);
+}
+
+.projects-slide {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.project-text {
+    flex-basis: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-title {
+    flex-basis: 100%;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0;
+    margin-bottom: 41px;
+}
+
+.project-time, .project-cost {
+    flex-basis: 50%;
+    margin-bottom: 44px;
+}
+
+.project-time, .project-cost, .projects-feedback {
+    display: flex;
+    align-items: flex-start;
+}
+
+.project-icon {
+    margin-right: 16px;
+}
+
+.project-subtitle {
+    margin: 0;
+    margin-bottom: 7px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.project-paragraph {
+    margin: 0;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.projects-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 44px;
+}
+
+.projects-bullet {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #ffbb01;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.projects-bullet-active {
+    background-color: #ffbb01;
+}
+
 .contacts-form {
     background: white;
     box-shadow: -5px 5px 0px #ffc41d;
@@ -235,4 +310,44 @@ body {
     text-decoration-line: underline;
     color: #a5a5a5;
     margin-top: 72px;
+}
+
+/* ----- Fix swiper layout for projects section ----- */
+
+/* Контейнер слайдера */
+.projects-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Обертка */
+.projects-slider .swiper-wrapper {
+  align-items: stretch; /* чтобы высота слайдов была одинаковая */
+}
+
+/* Слайд проекта */
+.projects-slider .swiper-slide {
+  width: auto; /* позволяем контенту занимать свою ширину */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* немного воздуха */
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+/* Чтобы изображение не растягивалось */
+.projects-slider .project-image {
+  width: 35%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Текст проекта */
+.projects-slider .project-text {
+  flex-basis: 60%;
+  display: flex;
+  flex-wrap: wrap;
 }
